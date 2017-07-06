@@ -21,7 +21,8 @@ class App extends Component {
     }
 
     videoSearch(term){
-        searchYouTube({key: API_KEY, term: term, maxResults: 6}, (videos) => {
+        console.log(term);
+        searchYouTube({key: API_KEY, q: term, maxResults: 6}, (videos) => {
             console.log(videos);
             this.setState({
                 videos: videos,
